@@ -1,8 +1,13 @@
+// İsim Soyisim: Ömer Yeşilyurt
+// Öğrenci No: 25901017
+// Proje: Sexy Prime Sayıları
+
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
+// Asal sayıları Eratosthenes Eleği ile bulan fonksiyon
 vector<bool> generatePrimes(int limit) {
     vector<bool> isPrime(limit + 1, true);
 
@@ -20,6 +25,7 @@ vector<bool> generatePrimes(int limit) {
     return isPrime;
 }
 
+// Sexy prime çiftlerini ekrana yazdıran fonksiyon
 void printSexyPrimes(const vector<bool>& isPrime, int limit) {
     for (int number = 2; number + 6 <= limit; number++) {
         if (isPrime[number] && isPrime[number + 6]) {
@@ -37,3 +43,5 @@ int main() {
 
     return 0;
 }
+
+                                                                    
